@@ -67,17 +67,26 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 // FAQ section
 
+const ARROW_COLLAPSED = "<";
+const ARROW_EXPANDED = ">";
+
 var acc = document.getElementsByClassName("accordion");
 var i;
 var len = acc.length;
 for (i = 0; i < len; i++) {
+  try{
+  acc[i].querySelector(".arrow").textContent = ARROW_COLLAPSED
+  } catch {}
+
   acc[i].addEventListener("click", function () {
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
+      panel.style.maxHeight = null; 
+      this.querySelector(".arrow").textContent = ARROW_COLLAPSED
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
+      this.querySelector(".arrow").textContent = ARROW_EXPANDED
     }
   });
 }
