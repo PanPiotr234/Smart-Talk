@@ -167,15 +167,15 @@ h1.promo-title {
     transform: translateY(63px);
 }
 
-.title::after {
-    content: "";
-    background-image: linear-gradient(to right, #4689e2, #0c4ba1);
-    height: 10px;
-    width: 50px;
-    margin: 0 auto 40px auto;
-    display: block;
-    transform: translateY(8px);
-}
+// .title::after {
+//     content: "";
+//     background-image: linear-gradient(to right, #4689e2, #0c4ba1);
+//     height: 10px;
+//     width: 50px;
+//     margin: 0 auto 40px auto;
+//     display: block;
+//     transform: translateY(8px);
+// }
 
 div.about_us-title h1{
     text-align: center;
